@@ -269,8 +269,6 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
     return person;
   };
-  
-  MakePerson('Steven', 'November 2', 416350331);
 
 
 //NEXT PROBLEM
@@ -280,7 +278,24 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
+
+  function MakeCard(type, name, number, expirationDate, csc) {
+    this.type = type;
+    this.name = name;
+    this.number = number;
+    this.expirationDate = expirationDate;
+    this.csc = csc;
+
+    var creditCard = {
+      type: type,
+      name: name,
+      number: number,
+      expirationDate: expirationDate,
+      csc: csc,
+    };
+
+    return creditCard;
+  }
   
   
 //NEXT PROBLEM
@@ -294,4 +309,16 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+  function bindCard(person, card) {
+    person = MakePerson;
+    card = MakeCard;
 
+    var wallet = {
+      person(),
+      card(),
+    };
+
+    return wallet;
+  }
+
+  bindCard();
