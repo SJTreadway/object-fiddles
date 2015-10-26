@@ -286,7 +286,7 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
     this.expirationDate = expirationDate;
     this.csc = csc;
 
-    var creditCard = {
+    var card = {
       type: type,
       name: name,
       number: number,
@@ -294,7 +294,7 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
       csc: csc,
     };
 
-    return creditCard;
+    return card;
   }
   
   
@@ -310,15 +310,16 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
   //Code Here
 
   function bindCard(person, card) {
-    person = MakePerson;
-    card = MakeCard;
+  this.person = person;
+  this.card = card;
 
-    var wallet = {
-      person(),
-      card(),
-    };
+  var wallet = {
+    person: person,
+    card: card,
+  };
 
-    return wallet;
-  }
+  return wallet;
+
+}
 
   bindCard();
